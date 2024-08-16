@@ -1,0 +1,436 @@
+{
+    "info": {
+        "_postman_id": "b8e9734e-7284-4286-a06d-d2ea8934aa9f",
+        "name": "Test Collection",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "Client",
+            "item": [
+                {
+                    "name": "Create",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "localhost:8001/api/clients",
+                            "path": [
+                                "api",
+                                "clients"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8001"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"dni\": \"123456A\",\n  \"name\": \"nombrePrueba\",\n  \"password\": \"1234\",\n  \"gender\": \"M\",\n  \"age\": 20,\n  \"address\": \"casa\",\n  \"phone\": \"33445566\",\n  \"active\": true\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Get All ",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "localhost:8001/api/clients",
+                            "path": [
+                                "api",
+                                "clients"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8001"
+                        }
+                    }
+                },
+                {
+                    "name": "Partial Update",
+                    "request": {
+                        "method": "PATCH",
+                        "url": {
+                            "raw": "localhost:8001/api/clients/1",
+                            "path": [
+                                "api",
+                                "clients",
+                                "1"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8001"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"isActive\": false\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Update",
+                    "request": {
+                        "method": "PUT",
+                        "url": {
+                            "raw": "localhost:8001/api/clients",
+                            "path": [
+                                "api",
+                                "clients"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8001"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"dni\": \"123456ABC\",\n  \"name\": \"nombrePrueba\",\n  \"password\": \"1234\",\n  \"gender\": \"M\",\n  \"age\": 20,\n  \"address\": \"casa\",\n  \"phone\": \"33445566\",\n  \"active\": true\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Get By Id",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "localhost:8001/api/clients/:id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "1"
+                                }
+                            ],
+                            "path": [
+                                "api",
+                                "clients",
+                                ":id"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8001"
+                        }
+                    }
+                },
+                {
+                    "name": "Delete By Id",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "localhost:8001/api/clients/:id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": ""
+                                }
+                            ],
+                            "path": [
+                                "api",
+                                "clients",
+                                ":id"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8001"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Account",
+            "item": [
+                {
+                    "name": "Create",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "localhost:8000/api/accounts",
+                            "path": [
+                                "api",
+                                "accounts"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"number\": \"123\",\n  \"type\": \"A\",\n  \"initialAmount\": 100,\n  \"isActive\": true,\n  \"clientId\": 1\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Get All",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "localhost:8000/api/accounts",
+                            "path": [
+                                "api",
+                                "accounts"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000"
+                        }
+                    }
+                },
+                {
+                    "name": "Get By Id",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "localhost:8000/api/accounts/:id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "1"
+                                }
+                            ],
+                            "path": [
+                                "api",
+                                "accounts",
+                                ":id"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000"
+                        }
+                    }
+                },
+                {
+                    "name": "Delete By Id",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "localhost:8000/api/accounts/:id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "1"
+                                }
+                            ],
+                            "path": [
+                                "api",
+                                "accounts",
+                                ":id"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000"
+                        }
+                    }
+                },
+                {
+                    "name": "Update",
+                    "request": {
+                        "method": "PUT",
+                        "url": {
+                            "raw": "localhost:8000/api/accounts/:id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "1"
+                                }
+                            ],
+                            "path": [
+                                "api",
+                                "accounts",
+                                ":id"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"number\": \"123456\",\n  \"type\": \"A\",\n  \"initialAmount\": 100,\n  \"isActive\": true,\n  \"clientId\": 1\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Partial Update",
+                    "request": {
+                        "method": "PATCH",
+                        "url": {
+                            "raw": "localhost:8000/api/accounts/:id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "1"
+                                }
+                            ],
+                            "path": [
+                                "api",
+                                "accounts",
+                                ":id"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"isActive\": false\n}"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Transaction",
+            "item": [
+                {
+                    "name": "Create",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "localhost:8000/api/transactions",
+                            "path": [
+                                "api",
+                                "transactions"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"date\": \"2024-08-15\",\n  \"type\": \"C\",\n  \"amount\": 300,\n  \"balance\": 50,\n  \"accountId\": 1\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Get All",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "localhost:8000/api/transactions",
+                            "path": [
+                                "api",
+                                "transactions"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000"
+                        }
+                    }
+                },
+                {
+                    "name": "Get By Id",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "localhost:8000/api/transactions/:id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "1"
+                                }
+                            ],
+                            "path": [
+                                "api",
+                                "transactions",
+                                ":id"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000"
+                        }
+                    }
+                },
+                {
+                    "name": "Report",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "localhost:8000/api/transactions/clients/:clientId/report?dateTransactionStart=2024-08-01&dateTransactionEnd=2024-08-30",
+                            "query": [
+                                {
+                                    "key": "dateTransactionStart",
+                                    "value": "2024-08-01"
+                                },
+                                {
+                                    "key": "dateTransactionEnd",
+                                    "value": "2024-08-30"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "clientId",
+                                    "value": "1"
+                                }
+                            ],
+                            "path": [
+                                "api",
+                                "transactions",
+                                "clients",
+                                ":clientId",
+                                "report"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
